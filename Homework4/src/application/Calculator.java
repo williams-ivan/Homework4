@@ -1,18 +1,18 @@
 package application;
 
 public class Calculator {
-	public double calculate(long n1, long n2, String operator) {
-		switch(operator) {
+	public String calculate(long n1, long n2, String operator) {
+		switch(operator) { //for the operators
 		case "+":
-			return n1 + n2;
+			return String.valueOf(n1 + n2); //returns the sum
 		case "/":
 			if(n2 == 0) {
-				return 0;
+				return "ERROR"; //returns an error if the denominator is 0
 			}
 			else {
-				return n1 / n2;
+				return String.valueOf(n1 / n2); //returns the quotient
 			}
 		}
-		return 0;
+		return "";
 	}
 }
